@@ -1,0 +1,9 @@
+csi:
+  # -- kubelet root directory. When unspecified, Longhorn uses the default value.
+  kubeletRootDir: /var/lib/kubelet
+
+
+
+# for cluster deployed on prem with kubeadm 
+#  - --kubelet-root-dir
+#  - /var/lib/kubelet

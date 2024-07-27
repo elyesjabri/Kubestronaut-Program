@@ -1,0 +1,31 @@
+# first create namespace dev2406
+# before creating pod
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-busybox
+  namespace: dev2406
+spec:
+  containers:
+  - name: secret
+    image: busybox
+    command: ["sleep", "3600"]
+    volumeMounts:
+    - name: secret-volume
+      mountPath: /etc/secret-volume
+  volumes:
+    # mount volume from secret dotfile-secret
+  - name: secret-volume
+    secret:
+      secretName: dotfile-secret
+  # option 1 using tolerations
+  # add toleration since master node has a taint
+  # master node had taint node-role.kubernetes.io/master
+  tolerations:
+  - key: node-role.kubernetes.io/master
+    operator: "Exists"
+    effect: "NoSchedule"
+  # option 2 using nodeName
+  nodeName: master
+
+

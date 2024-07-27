@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: nginx-clusterip
+  name: nginx-clusterip
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx-clusterip
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: nginx-clusterip
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        imagePullPolicy: IfNotPresent
+        resources: {}
+
+      imagePullSecrets:
+      - name: dockersecret
+status: {}

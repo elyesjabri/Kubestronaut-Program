@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: yellow
+  name: yellow
+spec:
+  volumes:
+      - name: pv-storage
+        persistentVolumeClaim:
+          claimName: pvc-yellow
+  containers:
+  - image: nginx
+    name: yellow
+    resources: {}
+    volumeMounts:
+      - mountPath: /data
+        name: pv-storage
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

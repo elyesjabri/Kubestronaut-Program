@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: daemon-imp
+  namespace: project-1
+  labels:
+    id: daemon-imp
+    uuid: 184226a0b-5f59-4e10-923f-c0e078e83462
+spec:
+  selector:
+    matchLabels:
+     id: daemon-imp
+     uuid: 184226a0b-5f59-4e10-923f-c0e078e83462     
+  template:
+    metadata:
+      labels:
+        id: daemon-imp
+        uuid: 184226a0b-5f59-4e10-923f-c0e078e83462
+    spec:
+      tolerations:
+      - key: node-role.kubernetes.io/control-plane
+        operator: Exists
+        effect: NoSchedule
+      - key: node-role.kubernetes.io/master
+        operator: Exists
+        effect: NoSchedule
+      containers:
+      - name: daemonhttpd
+        image: httpd:2.4-alpine
+        resources:
+          requests:
+            cpu: 20m
+            memory: 20Mi

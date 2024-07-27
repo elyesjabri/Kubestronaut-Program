@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+  labels:
+  name: multi-pod
+spec:
+  containers:
+  - image: nginx
+    name: web-pod
+    ports:
+    - containerPort: 80 
+    volumeMounts:
+    - mountPath: /var/log/nginx
+      name: hostpath-volume
+  - image: busybox:1.28
+    name: sidecar
+    command: ['sh', '-c', 'tail -f /var/busybox/log/*.log']
+    volumeMounts:
+    - mountPath: /var/busybox/log
+      name: hostpath-volume
+  volumes:
+  - hostPath:
+      path: /var/volume
+    name: hostpath-volume

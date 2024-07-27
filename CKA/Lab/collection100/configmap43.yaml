@@ -1,0 +1,11 @@
+apiVersion: v1
+data:
+  password: pass1234
+  user: root
+kind: ConfigMap
+metadata:
+  creationTimestamp: "2024-01-26T08:33:10Z"
+  name: data-config
+  namespace: default
+  resourceVersion: "2778722"
+  uid: d00c714e-2a0f-440d-a12f-2dfd4f0c88de

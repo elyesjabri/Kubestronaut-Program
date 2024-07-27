@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: mysqlserver-inbound
+  namespace: netpol
+spec:
+  podSelector:
+    matchLabels:
+     purpose: dbserver
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - podSelector:
+        matchLabels:
+          purpose: dbclient
+    ports:
+    - protocol: TCP
+      port: 3306
+
+

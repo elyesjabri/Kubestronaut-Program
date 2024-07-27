@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  creationTimestamp: null
+  labels:
+    app: blue-daemon
+  name: blue-daemon
+spec:
+  selector:
+    matchLabels:
+      app: blue-daemon
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: blue-daemon
+    spec:
+      containers:
+      - image: httpd:alpine
+        name: httpd
+        resources: {}

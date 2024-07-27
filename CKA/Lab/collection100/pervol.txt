@@ -1,0 +1,3 @@
+NAME     CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
+pv-rnd   100Mi      RWX            Retain           Available                          <unset>                          5d21h
+lab125   1Gi        RWO            Retain           Available           manual         <unset>                          7d19h

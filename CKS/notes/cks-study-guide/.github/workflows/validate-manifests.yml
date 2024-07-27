@@ -1,0 +1,14 @@
+name: Validate Manifests
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: Validate Manifests
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Kubeconform
+        uses: bmuschko/setup-kubeconform@v1
+      - name: Validate Against Kubernetes Schema
+        run: kubeconform -kubernetes-version=1.26.1 -ignore-missing-schemas -schema-location default -schema-location 'https://raw.githubusercontent.com/datreeio/CRDs-catalog/main/{{.Group}}/{{.ResourceKind}}_{{.ResourceAPIVersion}}.json' -ignore-filename-pattern=falco -ignore-filename-pattern=.github/workflows -ignore-filename-pattern=.json$ -summary .

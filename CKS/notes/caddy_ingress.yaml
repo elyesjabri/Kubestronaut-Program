@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: caddy-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+     - node
+    secretName: sec-node
+  rules:
+  - http:
+      paths:
+      - path: /caddy
+        pathType: Prefix
+        backend:
+          service:
+            name: caddy-svc
+            port:
+              number: 80
+    host: node

@@ -1,0 +1,17 @@
+kind: NetworkPolicy
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: allow-dev-tech
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: postgress
+  ingress:
+    - from:
+      - namespaceSelector:
+          matchLabels:
+            app: dev-tech
+        podSelector:
+          matchLabels:
+            type: review

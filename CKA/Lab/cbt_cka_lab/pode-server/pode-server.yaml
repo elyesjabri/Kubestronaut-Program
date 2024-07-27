@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: pode
+  name: pode
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: pode
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pode
+    spec:
+      containers:
+      - image: elyes/podeserver:latest
+        name: podeserver
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

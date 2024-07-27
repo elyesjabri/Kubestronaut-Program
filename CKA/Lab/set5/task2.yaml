@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: task1pod
+  name: task1pod
+spec:
+  containers:
+  - image: busybox
+    name: task1pod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+  nodeSelector:
+    disk: ssd
+status: {}

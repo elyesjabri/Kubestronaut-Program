@@ -1,0 +1,4 @@
+NAME                                CPU(cores)   MEMORY(bytes)   
+pv-pod                              2m           3Mi             
+pod-jxc56fv                         2m           3Mi             
+messagepod                          1m           4Mi             

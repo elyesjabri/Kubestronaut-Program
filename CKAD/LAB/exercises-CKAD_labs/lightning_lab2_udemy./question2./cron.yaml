@@ -1,0 +1,19 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: dice
+spec:
+  schedule: "*/1 * * * *"
+  jobTemplate:
+    spec:
+      backoffLimit: 25
+      # if failed for more than 20 seconds , fail the job
+      activeDeadlineSeconds: 20
+      template:
+        metadata:
+          name: throw-dice-pod
+        spec:
+          containers:
+          - image: kodekloud/throw-dice
+            name: throw-dice
+          restartPolicy: OnFailure

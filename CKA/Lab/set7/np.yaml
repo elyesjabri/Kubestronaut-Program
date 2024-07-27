@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: network-policy
+  namespace: project-a
+spec:
+  podSelector:
+    matchLabels:
+      run: db
+  policyTypes:
+  - Ingress
+  ingress:
+  - from:
+    - namespaceSelector:
+        matchLabels:
+          namespace: project-b
+      podSelector:
+        matchLabels:
+          run: service

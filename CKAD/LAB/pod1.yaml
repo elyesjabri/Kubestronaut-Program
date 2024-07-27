@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: logger
+  namespace: default
+spec:
+  restartPolicy: Never
+  volumes:
+  - name: vol
+    persistentVolumeClaim:
+      claimName: log-clain 
+  containers:
+  - name: logger
+    image: nginx:alpine
+    volumeMounts:
+    - name: vol
+      mountPath: /var/www/nginx

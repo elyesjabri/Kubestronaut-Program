@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  creationTimestamp: null
+  labels:
+    app: ds-important
+    id: id-i;portant
+    uuid: 989jgjhghg30645
+  name: ds-important
+spec:
+ spec:
+    containers:
+      - image: nginx
+        name: nginx

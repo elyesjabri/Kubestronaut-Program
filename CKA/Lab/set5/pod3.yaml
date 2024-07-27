@@ -1,0 +1,40 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: pod3
+  name: pod3node
+spec:
+  containers:
+  - image: nginx
+    name: pod3node
+    resources: {}
+  dnsPolicy: ClusterFirst
+  nodeSelector:
+    gpu: cuda
+  restartPolicy: Always
+status: {}
+
+---
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod3nodebix
+spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: name
+            operator: In
+            values:
+            - pod3node
+        topologyKey: kubernetes.io/hostname
+  containers:
+  - name: pod3nodebix
+    image: nginx
+    imagePullPolicy: IfNotPresent
+

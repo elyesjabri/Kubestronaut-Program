@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: egress18np
+  namespace: default
+spec:
+  podSelector:
+    matchLabels:
+      app: web
+  policyTypes:
+  - Egress
+
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: service
+    ports:
+    - protocol: TCP
+      port: 80
+

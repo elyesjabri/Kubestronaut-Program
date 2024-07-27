@@ -1,0 +1,9 @@
+question.md
+
+```
+Create a service messaging-service to expose the redis deployment in the marketing namespace within the cluster on port 6379.
+
+
+Use imperative commands
+
+```

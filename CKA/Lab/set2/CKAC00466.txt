@@ -1,0 +1,47 @@
+{
+  "name": "masternode",
+  "taints": [
+    {
+      "effect": "NoSchedule",
+      "key": "node-role.kubernetes.io/control-plane"
+    }
+  ]
+}
+{
+  "name": "workernode01",
+  "taints": null
+}
+{
+  "name": "workernode02",
+  "taints": null
+}
+{
+  "name": "workernode03",
+  "taints": null
+}
+{
+  "name": "workernode04",
+  "taints": [
+    {
+      "effect": "NoSchedule",
+      "key": "cpu",
+      "value": "high"
+    }
+  ]
+}
+{
+  "name": "workernode05",
+  "taints": null
+}
+{
+  "name": "workernode06",
+  "taints": null
+}
+{
+  "name": "workernode07",
+  "taints": null
+}
+{
+  "name": "workernode08",
+  "taints": null
+}

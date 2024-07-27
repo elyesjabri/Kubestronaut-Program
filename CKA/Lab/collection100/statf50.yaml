@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"apps/v1","kind":"StatefulSet","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"app":"stateful"},"name":"stateful","namespace":"default"},"spec":{"replicas":4,"selector":{"matchLabels":{"app":"stateful"}},"template":{"metadata":{"creationTimestamp":null,"labels":{"app":"stateful"}},"spec":{"containers":[{"image":"nginx","name":"nginx","resources":{}}]}}},"status":{}}
+  creationTimestamp: "2024-01-26T11:08:15Z"
+  generation: 1
+  labels:
+    app: stateful
+  name: stateful
+  namespace: default
+  resourceVersion: "2805522"
+  uid: e5c4d564-77f3-4a12-9fa3-a415d8f16810
+spec:
+  persistentVolumeClaimRetentionPolicy:
+    whenDeleted: Retain
+    whenScaled: Retain
+  podManagementPolicy: OrderedReady
+  replicas: 4
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      app: stateful
+  serviceName: ""
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: stateful
+    spec:
+      containers:
+      - image: nginx
+        imagePullPolicy: Always
+        name: nginx
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30
+  updateStrategy:
+    rollingUpdate:
+      partition: 0
+    type: RollingUpdate
+status:
+  availableReplicas: 4
+  collisionCount: 0
+  currentReplicas: 4
+  currentRevision: stateful-58cbc9bc8f
+  observedGeneration: 1
+  readyReplicas: 4
+  replicas: 4
+  updateRevision: stateful-58cbc9bc8f
+  updatedReplicas: 4

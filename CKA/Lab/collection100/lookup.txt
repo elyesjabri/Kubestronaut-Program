@@ -1,0 +1,15 @@
+Server:		10.96.0.10
+Address:	10.96.0.10:53
+
+Name:	green-service.default.svc.cluster.local
+Address: 10.101.159.234
+
+** server can't find green-service.svc.cluster.local: NXDOMAIN
+
+** server can't find green-service.cluster.local: NXDOMAIN
+
+** server can't find green-service.svc.cluster.local: NXDOMAIN
+
+** server can't find green-service.cluster.local: NXDOMAIN
+
+

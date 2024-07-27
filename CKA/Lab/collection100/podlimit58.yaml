@@ -1,0 +1,112 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cni.projectcalico.org/containerID: 7498871fd01673791e629dfce91fac9502315fc268c534b00ebc350af0edb008
+    cni.projectcalico.org/podIP: 172.16.246.236/32
+    cni.projectcalico.org/podIPs: 172.16.246.236/32
+    name: green-pod
+  creationTimestamp: "2024-01-26T08:39:51Z"
+  labels:
+    run: green
+  name: green
+  namespace: default
+  resourceVersion: "2785643"
+  uid: e40512b3-dd75-4e02-a158-e2cd46ebb58c
+spec:
+  containers:
+  - envFrom:
+    - configMapRef:
+        name: data-config
+    image: nginx
+    imagePullPolicy: Always
+    name: green
+    resources: 
+      limits:
+        cpu: 160m
+        memory: 200Mi
+      requests:
+        cpu: 20m
+        memory: 40Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-2tm46
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: workernode02
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-2tm46
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-26T08:39:51Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-26T08:39:56Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-26T08:39:56Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-01-26T08:39:51Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://8f3060810e426c5fb8db28a8bd03f5e67ab4d1e94ab0a4801c513ca78cb9155a
+    image: docker.io/library/nginx:latest
+    imageID: a8758716bb6aa4d90071160d27028fe4eaee7ce8166221a97d30440c8eac2be6
+    lastState: {}
+    name: green
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-01-26T08:39:55Z"
+  hostIP: 100.79.46.14
+  phase: Running
+  podIP: 172.16.246.236
+  podIPs:
+  - ip: 172.16.246.236
+  qosClass: BestEffort
+  startTime: "2024-01-26T08:39:51Z"

@@ -1,0 +1,10 @@
+question.md
+
+```
+Create a Persistent Volume with the given specification.
+
+Volume Name: pv-analytics
+Storage: 100Mi
+Access modes: ReadWriteMany
+Host Path: /pv/data-analytics
+```

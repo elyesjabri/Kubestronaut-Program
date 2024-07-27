@@ -1,0 +1,1 @@
+masternode workernode01 workernode02 workernode03 workernode04 workernode05 workernode06 workernode07 workernode08

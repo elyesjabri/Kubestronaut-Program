@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: null
+  labels:
+    run: web-pod
+  name: web-pod
+spec:
+  nodeName: workernode02
+  containers:
+  - image: httpd
+    name: web-pod
+    resources: {}
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
+status: {}

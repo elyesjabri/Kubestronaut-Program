@@ -1,0 +1,7 @@
+```
+Add a taint to the node node01 of the cluster. Use the specification below:
+
+
+key:app_type, value:alpha and effect:NoSchedule
+Create a pod called alpha, image:redis with toleration to node01
+```

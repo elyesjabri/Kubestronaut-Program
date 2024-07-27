@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+  labels: 
+     app: http
+spec:
+  replicas: 3
+  selector:
+     matchLabels:
+       app: http
+  template:
+    metadata:
+        labels:
+          app: http
+    spec:
+      containers:
+      - name: frontend
+        image: httpd:2.4-alpine

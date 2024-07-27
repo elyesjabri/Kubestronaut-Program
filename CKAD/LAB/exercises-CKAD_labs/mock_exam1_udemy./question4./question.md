@@ -1,0 +1,4 @@
+
+```
+Deploy a messaging pod using the redis:alpine image with the labels set to tier=msg.
+```

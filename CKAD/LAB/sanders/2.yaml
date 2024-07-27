@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: secretapp
+  name: secretapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: secretapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: secretapp
+    spec:
+      containers:
+      - image: nginx
+        name: nginx
+        env:  
+        - name: password 
+          valueFrom:
+            secretKeyRef:
+              name: s1
+              key: password
+        resources: {}
+status: {}

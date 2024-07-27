@@ -1,0 +1,58 @@
+# Configuration file for GitHub Pages
+
+# Build settings
+markdown: kramdown
+remote_theme: pmarsceill/just-the-docs
+plugins:
+- jekyll-remote-theme
+- jekyll-feed
+
+color_scheme: dark
+
+
+# Site settings
+title: KodeKloud CKS Challenge
+description: The challenge series test the skills and understanding of Kubernetes security concepts. The challenges in this series cover a broad range of Kubernetes security topics, including network policies, RBAC, seccomp, AppArmor, and others. 
+url: https://krishanthisera.github.io/
+baseurl: /CKS-Challenges/
+
+# GitHub Pages settings
+repository: krishanthisera/CKS-Challenges
+
+
+# Navigation links
+navbar:
+  title: KodeKloud CKS Challenge
+  links:
+  - title: Introduction
+    url: /
+    description: "Challenge 01: Focused on Trivy and AppArmor"
+  - title: Challenge 01
+    url: /challenge-01/
+    description: "Challenge 01: Focused on Trivy and AppArmor"
+  - title: Challenge 02
+    url: /challenge-02/
+    description: "Challenge 02: Focused on securing Docker image and kubernetes manifests"
+  - title: Challenge 03
+    url: /challenge-03/
+    description: "Challenge 03: Focused on kube-bench and CIS benchmark"
+  - title: Challenge 04
+    url: /challenge-04/
+    description: "Challenge 04: Focused on how to analysis/audit suspicious behaviors using, using Falco and Kubernetes auditing."
+
+# Sidebar links
+sidebar:
+  - title: Challenges
+    children:
+      - title: Challenge 01
+        url: /challenge-01/
+        description: "Challenge 01: Focused on Trivy and AppArmor"
+      - title: Challenge 02
+        url: /challenge-02/
+        description: "Challenge 02: Focused on securing Docker image and kubernetes manifests"
+      - title: Challenge 03
+        url: /challenge-03/
+        description: "Challenge 03: Focused on kube-bench and CIS benchmark"
+      - title: Challenge 04
+        url: /challenge-04/
+        description: "Challenge 04: Focused on how to analysis/audit suspicious behaviors using, using Falco and Kubernetes auditing"

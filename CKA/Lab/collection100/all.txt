@@ -1,0 +1,200 @@
+NAMESPACE          NAME                                            READY   STATUS        RESTARTS          AGE
+access             pod/testbox                                     1/1     Running       279 (30m ago)     11d
+airfusion          pod/nginx                                       1/1     Terminating   0                 7d18h
+calico-apiserver   pod/calico-apiserver-bf78d996b-8slbt            1/1     Running       2 (21h ago)       7d21h
+calico-apiserver   pod/calico-apiserver-bf78d996b-h8knq            1/1     Running       2 (21h ago)       7d21h
+calico-system      pod/calico-kube-controllers-65dbcb8786-zqkxk    1/1     Running       0                 2d23h
+calico-system      pod/calico-node-28sgt                           1/1     Running       2 (21h ago)       13d
+calico-system      pod/calico-node-5fkrc                           1/1     Running       1                 13d
+calico-system      pod/calico-node-6b7jd                           1/1     Running       1                 13d
+calico-system      pod/calico-node-6gc2g                           1/1     Running       1                 13d
+calico-system      pod/calico-node-c6svw                           1/1     Running       1                 13d
+calico-system      pod/calico-node-cvxkt                           1/1     Running       1                 13d
+calico-system      pod/calico-node-nw229                           1/1     Running       2                 13d
+calico-system      pod/calico-node-pnbr4                           1/1     Running       3                 13d
+calico-system      pod/calico-node-psw4r                           1/1     Running       2 (7d21h ago)     13d
+calico-system      pod/calico-typha-6c4f5bd7f8-2r5fc               1/1     Running       0                 7d19h
+calico-system      pod/calico-typha-6c4f5bd7f8-8wqmm               1/1     Running       0                 7d19h
+calico-system      pod/calico-typha-6c4f5bd7f8-cdjs9               1/1     Running       1                 2d23h
+calico-system      pod/csi-node-driver-2mg7g                       2/2     Running       2                 13d
+calico-system      pod/csi-node-driver-6lkt8                       2/2     Running       4                 13d
+calico-system      pod/csi-node-driver-dtvcx                       2/2     Running       2                 13d
+calico-system      pod/csi-node-driver-fcqht                       2/2     Running       3                 13d
+calico-system      pod/csi-node-driver-ft9cd                       2/2     Running       2                 13d
+calico-system      pod/csi-node-driver-j86db                       2/2     Running       2                 13d
+calico-system      pod/csi-node-driver-kmpzh                       2/2     Running       2                 13d
+calico-system      pod/csi-node-driver-vx6tr                       2/2     Running       0                 13d
+calico-system      pod/csi-node-driver-xs57n                       2/2     Running       2                 13d
+default            pod/admin-pod                                   1/1     Terminating   265 (92m ago)     9d
+default            pod/blue-daemon-bzcs4                           1/1     Running       0                 7m23s
+default            pod/blue-daemon-cwdf6                           1/1     Running       0                 7m23s
+default            pod/blue-daemon-g4bh7                           1/1     Running       0                 7m23s
+default            pod/blue-daemon-hrjfv                           1/1     Running       0                 7m23s
+default            pod/blue-daemon-rwkbb                           1/1     Running       0                 7m23s
+default            pod/dnslookup                                   1/1     Running       235 (5m11s ago)   9d
+default            pod/green                                       1/1     Running       0                 2d20h
+default            pod/grey                                        1/1     Running       70 (45m ago)      2d22h
+default            pod/lab124deploy-7c7c8457f9-2cw5f               1/1     Terminating   0                 11d
+default            pod/lab124deploy-7c7c8457f9-cxrrc               1/1     Running       0                 58m
+default            pod/lab126deploy-fff46cd4b-jplvr                1/1     Running       0                 58m
+default            pod/lab126deploy-fff46cd4b-llc5m                1/1     Running       0                 11d
+default            pod/lab126deploy-fff46cd4b-lw7ck                1/1     Terminating   0                 11d
+default            pod/lab126deploy-fff46cd4b-qhhs6                1/1     Running       0                 7d21h
+default            pod/lab1310pod                                  1/1     Running       0                 10d
+default            pod/nginx-68946b89db-269h5                      1/1     Terminating   0                 4d
+default            pod/nginx-68946b89db-47x9m                      1/1     Running       0                 3d
+default            pod/nginx-68946b89db-5zqmg                      1/1     Running       0                 58m
+default            pod/nginx-68946b89db-87hpp                      1/1     Terminating   0                 2d23h
+default            pod/nginx-68946b89db-dkhzn                      1/1     Terminating   0                 2d23h
+default            pod/nginx-68946b89db-hx8rb                      1/1     Running       0                 58m
+default            pod/nginx-68946b89db-j8dvh                      1/1     Running       0                 58m
+default            pod/nginx-68946b89db-mfnfj                      1/1     Running       0                 58m
+default            pod/nginx-68946b89db-rh9xs                      1/1     Running       0                 4d
+default            pod/nginx-deployment-5b9455bc67-d8fl8           1/1     Terminating   0                 7d22h
+default            pod/nginx-deployment-5b9455bc67-w5xjn           1/1     Running       0                 58m
+default            pod/nginx-deployment-5b9455bc67-zjzlq           1/1     Running       0                 7d21h
+default            pod/nginx-rolling-57bc46ffcb-2tplk              1/1     Running       0                 58m
+default            pod/nginx-rolling-57bc46ffcb-gfpbp              1/1     Running       0                 2d23h
+default            pod/nginx-rolling-57bc46ffcb-mtc6g              1/1     Terminating   0                 3d23h
+default            pod/nginx-rolling-57bc46ffcb-pth6q              1/1     Running       0                 58m
+default            pod/non-per-pod                                 1/1     Running       0                 2d23h
+default            pod/pod-jxc56fv                                 1/1     Running       0                 6d22h
+default            pod/pv-pod                                      1/1     Running       0                 3d23h
+default            pod/simplepod-7fcd9d85c8-2vn8t                  1/1     Terminating   0                 6d22h
+default            pod/simplepod-7fcd9d85c8-7kj6d                  1/1     Running       0                 58m
+default            pod/simplepod-7fcd9d85c8-8zj66                  1/1     Running       0                 2d23h
+default            pod/simplepod-7fcd9d85c8-9hvft                  1/1     Terminating   0                 6d22h
+default            pod/simplepod-7fcd9d85c8-d28qj                  1/1     Running       0                 58m
+default            pod/simplepod-7fcd9d85c8-khb2b                  1/1     Running       0                 58m
+default            pod/simplepod-7fcd9d85c8-wtvpn                  1/1     Running       0                 6d22h
+default            pod/simplepod-7fcd9d85c8-wwlkb                  1/1     Running       0                 2d23h
+default            pod/simplepod-7fcd9d85c8-x2rwd                  1/1     Running       0                 6d22h
+default            pod/simplepod-7fcd9d85c8-xgn64                  1/1     Running       0                 58m
+default            pod/stateful-0                                  1/1     Running       0                 2d21h
+default            pod/stateful-1                                  1/1     Running       0                 33m
+default            pod/stateful-2                                  1/1     Running       0                 2d21h
+default            pod/stateful-3                                  1/1     Running       0                 2d21h
+default            pod/staticnginx-workernode01                    1/1     Running       0                 9d
+default            pod/test-yellow-tech                            1/1     Running       0                 14m
+default            pod/testtol-56d58cfbd-2kc9b                     1/1     Terminating   0                 7d22h
+default            pod/testtol-56d58cfbd-2ldm6                     1/1     Running       0                 58m
+default            pod/testtol-56d58cfbd-jk4t9                     1/1     Terminating   0                 7d22h
+default            pod/testtol-56d58cfbd-kqlcb                     1/1     Running       0                 58m
+default            pod/testtol-56d58cfbd-lbm8l                     1/1     Terminating   0                 7d22h
+default            pod/testtol-56d58cfbd-ld9nq                     1/1     Running       0                 58m
+default            pod/testtol-56d58cfbd-sr9vp                     1/1     Running       0                 58m
+default            pod/testtol-56d58cfbd-zlds7                     1/1     Terminating   0                 7d22h
+default            pod/toloratenginx-5bbbf45846-4svqx              1/1     Running       0                 58m
+default            pod/toloratenginx-5bbbf45846-7wrkz              1/1     Running       0                 7d21h
+default            pod/toloratenginx-5bbbf45846-g7mmj              1/1     Terminating   0                 7d22h
+default            pod/toloratenginx-5bbbf45846-sv2s9              1/1     Terminating   0                 2d23h
+default            pod/toloratenginx-5bbbf45846-vrrp2              1/1     Running       0                 58m
+default            pod/toloratenginx-5bbbf45846-wmhxl              1/1     Running       0                 7d22h
+default            pod/web-003-59b65f475-5sn47                     1/1     Running       0                 58m
+default            pod/web-003-59b65f475-hs6mf                     1/1     Terminating   0                 7d22h
+default            pod/web-003-59b65f475-lh6kc                     1/1     Running       0                 7d22h
+default            pod/web-003-59b65f475-t5p8b                     1/1     Running       0                 7d21h
+default            pod/web-proj-268-5564fbcd55-64tpc               1/1     Running       0                 58m
+default            pod/web-proj-268-5564fbcd55-dbl7s               1/1     Terminating   0                 2d23h
+default            pod/yellow                                      0/1     Pending       0                 3d19h
+default            pod/yellow-tech                                 1/1     Running       0                 23m
+defense            pod/delta-pod                                   1/1     Running       0                 9d
+devlopment         pod/multi-pod                                   2/2     Terminating   0                 6d20h
+ingress-nginx      pod/ingress-nginx-controller-76df688779-tgz5r   1/1     Running       0                 2d23h
+kube-system        pod/coredns-76f75df574-crqnm                    1/1     Running       0                 7d20h
+kube-system        pod/coredns-76f75df574-n8g6r                    1/1     Running       2 (21h ago)       7d20h
+kube-system        pod/etcd-masternode                             1/1     Running       0                 7d20h
+kube-system        pod/kube-apiserver-masternode                   1/1     Running       3 (21h ago)       7d20h
+kube-system        pod/kube-controller-manager-masternode          1/1     Running       43 (8h ago)       7d20h
+kube-system        pod/kube-proxy-2ntwk                            1/1     Running       1                 7d20h
+kube-system        pod/kube-proxy-55477                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-dvfgp                            1/1     Running       1                 7d20h
+kube-system        pod/kube-proxy-hfxks                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-kdsvt                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-r2p29                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-rg4vd                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-tq2xb                            1/1     Running       0                 7d20h
+kube-system        pod/kube-proxy-vdqrz                            1/1     Running       0                 7d20h
+kube-system        pod/kube-scheduler-masternode                   1/1     Running       45 (8h ago)       7d20h
+kube-system        pod/metrics-server-69fb86cf66-zldjr             1/1     Running       2 (11d ago)       13d
+limited            pod/lab128deploy-6f9c55779d-crnhn               1/1     Terminating   0                 7d22h
+limited            pod/lab128deploy-6f9c55779d-rxkfk               1/1     Running       0                 7d21h
+limited            pod/lab128deploy-6f9c55779d-sl6x9               1/1     Running       0                 58m
+limited            pod/lab128deploy-6f9c55779d-xhfk4               1/1     Running       0                 58m
+tigera-operator    pod/tigera-operator-55585899bf-7tsjg            1/1     Running       59 (34m ago)      13d
+
+NAMESPACE          NAME                                         TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                      AGE
+calico-apiserver   service/calico-api                           ClusterIP      10.103.28.146    <none>        443/TCP                      13d
+calico-system      service/calico-kube-controllers-metrics      ClusterIP      None             <none>        9094/TCP                     13d
+calico-system      service/calico-typha                         ClusterIP      10.102.20.98     <none>        5473/TCP                     13d
+default            service/audit-web-app-service                NodePort       10.109.74.0      <none>        8080:30002/TCP               7d15h
+default            service/green-service                        ClusterIP      10.101.159.234   <none>        80/TCP                       3d21h
+default            service/kubernetes                           ClusterIP      10.96.0.1        <none>        443/TCP                      14d
+default            service/lab126deploy                         NodePort       10.98.100.12     <none>        80:32567/TCP                 11d
+default            service/lab1310pod                           NodePort       10.98.108.99     <none>        80:31512/TCP                 10d
+default            service/nginx-service                        NodePort       10.106.93.62     <none>        80:32000/TCP                 13d
+default            service/web-pod-svc                          ClusterIP      10.104.30.72     <none>        80/TCP                       9d
+default            service/yellow-tech-service                  ClusterIP      10.109.98.45     <none>        80/TCP                       22m
+ingress-nginx      service/ingress-nginx-controller             LoadBalancer   10.110.66.244    <pending>     80:31133/TCP,443:31215/TCP   18d
+ingress-nginx      service/ingress-nginx-controller-admission   ClusterIP      10.109.217.227   <none>        443/TCP                      18d
+kube-system        service/kube-dns                             ClusterIP      10.96.0.10       <none>        53/UDP,53/TCP,9153/TCP       18d
+kube-system        service/metrics-server                       ClusterIP      10.102.168.7     <none>        443/TCP                      18d
+restricted         service/testginx                             ClusterIP      10.100.246.63    <none>        80/TCP                       11d
+
+NAMESPACE       NAME                             DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR            AGE
+calico-system   daemonset.apps/calico-node       9         9         7       9            7           kubernetes.io/os=linux   13d
+calico-system   daemonset.apps/csi-node-driver   9         9         7       9            7           kubernetes.io/os=linux   13d
+default         daemonset.apps/blue-daemon       5         5         5       5            5           <none>                   7m23s
+kube-system     daemonset.apps/kube-proxy        9         9         7       9            7           kubernetes.io/os=linux   18d
+
+NAMESPACE          NAME                                       READY   UP-TO-DATE   AVAILABLE   AGE
+calico-apiserver   deployment.apps/calico-apiserver           2/2     2            2           13d
+calico-system      deployment.apps/calico-kube-controllers    1/1     1            1           13d
+calico-system      deployment.apps/calico-typha               2/3     3            2           13d
+default            deployment.apps/lab124deploy               1/1     1            1           11d
+default            deployment.apps/lab126deploy               3/3     3            3           11d
+default            deployment.apps/nginx                      6/6     6            6           4d
+default            deployment.apps/nginx-deployment           2/2     2            2           13d
+default            deployment.apps/nginx-rolling              3/3     3            3           3d23h
+default            deployment.apps/simplepod                  8/8     8            8           6d22h
+default            deployment.apps/testtol                    4/4     4            4           11d
+default            deployment.apps/toloratenginx              4/4     4            4           11d
+default            deployment.apps/web-003                    3/3     3            3           7d22h
+default            deployment.apps/web-proj-268               1/1     1            1           9d
+ingress-nginx      deployment.apps/ingress-nginx-controller   1/1     1            1           18d
+kube-system        deployment.apps/coredns                    2/2     2            2           18d
+kube-system        deployment.apps/metrics-server             1/1     1            1           18d
+limited            deployment.apps/lab128deploy               3/3     3            3           11d
+tigera-operator    deployment.apps/tigera-operator            1/1     1            1           13d
+
+NAMESPACE          NAME                                                  DESIRED   CURRENT   READY   AGE
+calico-apiserver   replicaset.apps/calico-apiserver-bf78d996b            2         2         2       13d
+calico-system      replicaset.apps/calico-kube-controllers-65dbcb8786    1         1         1       13d
+calico-system      replicaset.apps/calico-typha-6c4f5bd7f8               3         3         2       13d
+default            replicaset.apps/lab124deploy-7c7c8457f9               1         1         1       11d
+default            replicaset.apps/lab126deploy-fff46cd4b                3         3         3       11d
+default            replicaset.apps/nginx-68946b89db                      6         6         6       4d
+default            replicaset.apps/nginx-7854ff8877                      0         0         0       4d
+default            replicaset.apps/nginx-deployment-5b9455bc67           2         2         2       13d
+default            replicaset.apps/nginx-rolling-57bc46ffcb              3         3         3       3d23h
+default            replicaset.apps/nginx-rolling-84589f9d9               0         0         0       3d23h
+default            replicaset.apps/simplepod-7fcd9d85c8                  8         8         8       6d22h
+default            replicaset.apps/testtol-56d58cfbd                     4         4         4       11d
+default            replicaset.apps/toloratenginx-5bbbf45846              4         4         4       11d
+default            replicaset.apps/web-003-59b65f475                     3         3         3       7d22h
+default            replicaset.apps/web-proj-268-5564fbcd55               1         1         1       9d
+default            replicaset.apps/web-proj-268-68b8987b5d               0         0         0       9d
+ingress-nginx      replicaset.apps/ingress-nginx-controller-76df688779   1         1         1       18d
+kube-system        replicaset.apps/coredns-5dd5756b68                    0         0         0       18d
+kube-system        replicaset.apps/coredns-76f75df574                    2         2         2       7d20h
+kube-system        replicaset.apps/coredns-785d6d7966                    0         0         0       14d
+kube-system        replicaset.apps/metrics-server-69fb86cf66             1         1         1       18d
+limited            replicaset.apps/lab128deploy-595cd4d5cb               0         0         0       11d
+limited            replicaset.apps/lab128deploy-6f9c55779d               3         3         3       11d
+tigera-operator    replicaset.apps/tigera-operator-55585899bf            1         1         1       13d
+
+NAMESPACE   NAME                        READY   AGE
+default     statefulset.apps/stateful   4/4     2d21h
+
+NAMESPACE   NAME                                        REFERENCE          TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+default     horizontalpodautoscaler.autoscaling/nginx   Deployment/nginx   <unknown>/40%   6         12        6          3d
